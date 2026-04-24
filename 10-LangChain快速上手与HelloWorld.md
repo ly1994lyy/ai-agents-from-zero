@@ -129,11 +129,7 @@ python 案例与源码-2-LangChain框架/01-helloworld/LangChainV1.0.py
 pip install -r requirements.txt
 ```
 
-这样做的好处是：
-
-- 与本仓库案例保持一致
-- 后续学到 Prompt、Parser、LCEL、Memory、RAG、Agent 时不用再频繁补装依赖
-- 避免“当前章节能跑、下一章突然缺包”的情况
+它能和本仓库案例保持一致，后续学到 Prompt、Parser、LCEL、Memory、RAG、Agent 时也不用再频繁补装依赖，还能避免“当前章节能跑、下一章突然缺包”的情况。
 
 如果网络较慢，可用国内镜像：
 
@@ -251,7 +247,7 @@ https://dashscope.aliyuncs.com/compatible-mode/v1
 - `invoke()`：同步调用模型，返回一个消息对象
 - `.content`：取出消息对象里的正文文本
 
-你可以先把它理解成：
+也就是说：
 
 - `invoke()` = “把问题发出去”
 - `.content` = “把模型真正回答的文字取出来”

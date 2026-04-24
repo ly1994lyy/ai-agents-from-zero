@@ -7,7 +7,7 @@
 **本章课程目标：**
 
 - 知道调用前需在 Dify 中**发布工作流**，并会**创建 API 密钥**（密钥与工作流一一对应）。
-- 掌握 Dify 工作流调用最核心的 5 个要素：**URL、Authorization、`inputs`、`response_mode`、`user`**。
+- 掌握 Dify 工作流调用最核心的 5 个要素：URL、Authorization、`inputs`、`response_mode`、`user`。
 - 能用 **Postman** 或 **Python + requests** 成功触发一个 Dify 工作流，并从流式结果里拿到最终输出。
 - 会在 Dify 工作空间里查看运行日志，把“代码侧日志”和“平台侧日志”对起来排查问题。
 
@@ -204,12 +204,7 @@ Body 选择 `raw`，格式选择 `JSON`。
 
 ![Dify 工作流追踪信息页面的界面示意图](images/4/4-4-4-1.png)
 
-平台日志的价值非常大，因为它能告诉你：
-
-- 这次请求有没有真正进到工作流
-- 哪个节点报错了
-- 输入变量有没有传对
-- 最终输出是不是和代码侧拿到的一致
+平台日志的价值非常大，因为它能告诉你：这次请求有没有真正进到工作流；哪个节点报错了；输入变量有没有传对；最终输出是不是和代码侧拿到的一致。
 
 很多时候，问题并不是 Python 代码写错，而是**工作流内部节点、变量名、工具配置**出了问题。这个时候平台日志会比本地日志更直观。
 
@@ -399,11 +394,7 @@ decoded_line: data: {"event":"node_finished", "data":{"title":"谷歌搜索", "s
 decoded_line: data: {"event":"workflow_finished", "data":{"status":"succeeded", "outputs":{...}}}
 ```
 
-可以把它理解成：
-
-- `workflow_started`：整次工作流开始执行
-- `node_started / node_finished`：某个具体节点开始或结束
-- `workflow_finished`：整次流程结束，并在 `outputs` 中给出最终结果
+这些事件分别对应工作流的不同阶段：`workflow_started` 表示整次工作流开始执行，`node_started / node_finished` 表示某个具体节点开始或结束，`workflow_finished` 则表示整次流程结束，并会在 `outputs` 中给出最终结果。
 
 ### 6.3 为什么不建议把完整正文原样打印进文档
 

@@ -42,7 +42,7 @@ Coze 的 API 能力需要通过应用发布功能启用。
 
 ![Coze API Playground 中查看 workflow_id 和 app_id 的界面](images/5/5-2-2-1.png)
 
-可以先这样理解：
+可以这样理解：
 
 - `workflow_id`：这次到底执行哪一个工作流
 - `app_id`：这个工作流属于哪个应用上下文

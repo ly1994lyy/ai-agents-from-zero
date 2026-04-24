@@ -32,9 +32,7 @@ Windows 本地部署 Dify，核心依赖只有两个：
 - Redis
 - 向量数据库等
 
-部署主线可以先记成一句话：
-
-> **安装 Docker Desktop -> 获取 Dify 项目 -> 配置 `.env` -> `docker compose up -d` -> 浏览器访问。**
+部署主线可以直接概括成一句话：**安装 Docker Desktop -> 获取 Dify 项目 -> 配置 `.env` -> `docker compose up -d` -> 浏览器访问。**
 
 ## 2、Docker Desktop 安装
 
@@ -143,7 +141,7 @@ https://docs.dify.ai/zh-hans/getting-started/install-self-hosted/docker-compose
 
 如果本机 `80` 端口被其他程序占用了，就改成 `8100`、`8080` 或其他未被占用端口。
 
-> 可以先这样理解：`.env` 像这套部署环境的“总开关配置文件”。第 7 章会频繁用到它，第 8.1 章会进一步解释它和 Compose、容器、数据卷之间的关系。
+> 可以这样理解：`.env` 像这套部署环境的“总开关配置文件”。第 7 章会频繁用到它，第 8.1 章会进一步解释它和 Compose、容器、数据卷之间的关系。
 
 ## 4、启动 Dify
 
